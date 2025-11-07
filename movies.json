@@ -1,0 +1,49 @@
+[
+  {
+    "id": "m1",
+    "title_en": "The Dark Knight",
+    "title_fa": "شوالیه تاریکی",
+    "year": 2008,
+    "director": "Christopher Nolan",
+    "country": "USA",
+    "cast": [
+      "Christian Bale",
+      "Heath Ledger"
+    ],
+    "genres": [
+      "Action",
+      "Crime"
+    ],
+    "poster": "https://via.placeholder.com/300x450?text=Dark+Knight",
+    "sources": {
+      "1080": "https://samplelib.com/lib/preview/mp4/sample-20s.mp4",
+      "720": "https://samplelib.com/lib/preview/mp4/sample-10s.mp4",
+      "480": "https://samplelib.com/lib/preview/mp4/sample-5s.mp4"
+    },
+    "description_en": "Batman faces the Joker in Gotham City.",
+    "description_fa": "بتمن در برابر جوکر در شهر گاتهام قرار می‌گیرد."
+  },
+  {
+    "id": "m2",
+    "title_en": "Sample Movie",
+    "title_fa": "فیلم نمونه",
+    "year": 2020,
+    "director": "Sample Director",
+    "country": "Iran",
+    "cast": [
+      "Actor One",
+      "Actor Two"
+    ],
+    "genres": [
+      "Drama"
+    ],
+    "poster": "https://via.placeholder.com/300x450?text=Sample+Movie",
+    "sources": {
+      "1080": "https://samplelib.com/lib/preview/mp4/sample-20s.mp4",
+      "720": "https://samplelib.com/lib/preview/mp4/sample-10s.mp4",
+      "480": "https://samplelib.com/lib/preview/mp4/sample-5s.mp4"
+    },
+    "description_en": "A short sample drama.",
+    "description_fa": "یک درام نمونه کوتاه."
+  }
+]

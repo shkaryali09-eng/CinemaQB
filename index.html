@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fa">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CinemaQB</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand"><span class="logo-icon">🎥</span> <span id="brandText">CinemaQB</span></div>
+    <div class="controls">
+      <select id="langToggle" title="Language">
+        <option value="fa">فارسی</option>
+        <option value="en">EN</option>
+      </select>
+      <button id="themeToggle" title="Day / Night">🌙</button>
+    </div>
+  </div>
+
+  <main class="container">
+    <header class="hero">
+      <h1 id="heroTitle">CinemaQB</h1>
+      <p id="heroSubtitle">تماشای آنلاین فیلم‌ها — Watch movies online</p>
+      <input id="search" placeholder="جستجو..." />
+    </header>
+
+    <section class="categories">
+      <h3 id="catTitle">ژانرها</h3>
+      <div id="genresList" class="genres"></div>
+    </section>
+
+    <section>
+      <h3 id="popularTitle">محبوب</h3>
+      <div id="moviesGrid" class="grid"></div>
+    </section>
+  </main>
+
+  <!-- Bottom menu -->
+  <nav class="bottom-menu">
+    <button id="menuFavs">⭐ علاقه‌مندی</button>
+    <button id="menuCats">📚 دسته‌بندی</button>
+    <button id="menuProfile">👤 پروفایل</button>
+  </nav>
+
+  <!-- Movie page modal -->
+  <div id="movieModal" class="modal hidden" role="dialog" aria-hidden="true">
+    <div class="modal-card">
+      <button class="close" id="closeMovie">✕</button>
+      <h2 id="movieTitle">Title</h2>
+      <div class="movie-meta">
+        <img id="moviePoster" src="" alt="poster">
+        <div class="meta-right">
+          <p id="movieInfo"></p>
+          <div class="quality">
+            <label>Quality:</label>
+            <select id="qualitySelect">
+              <option value="1080">1080</option>
+              <option value="720">720</option>
+              <option value="480">480</option>
+            </select>
+            <div id="langSelectWrap">
+              <label id="langLabel">Language:</label>
+              <select id="uiLang">
+                <option value="fa">فارسی</option>
+                <option value="en">English</option>
+              </select>
+            </div>
+          </div>
+          <div id="playerWrap"></div>
+        </div>
+      </div>
+      <div class="movie-desc" id="movieDesc"></div>
+
+      <h4 id="commentsTitle">نظرات / Comments</h4>
+      <div id="comments"></div>
+      <textarea id="commentInput" placeholder="نظر خود را وارد کنید..."></textarea>
+      <button id="addComment">ارسال نظر</button>
+    </div>
+  </div>
+
+  <!-- Admin login modal -->
+  <div id="adminModal" class="modal hidden">
+    <div class="modal-card small">
+      <button class="close" id="closeAdmin">✕</button>
+      <h3>Admin Login</h3>
+      <input id="adminPass" type="password" placeholder="Enter admin password" />
+      <button id="adminLoginBtn">Login</button>
+      <div id="adminArea" class="hidden">
+        <h4>Admin Panel</h4>
+        <p>Upload a poster and add/edit movie metadata. Files are kept in browser (local only).</p>
+        <label>Poster: <input type="file" id="posterFile" accept="image/*" /></label>
+        <label>Title (EN): <input id="adminTitleEn" /></label>
+        <label>Title (FA): <input id="adminTitleFa" /></label>
+        <label>Year: <input id="adminYear" type="number" /></label>
+        <label>Director: <input id="adminDirector" /></label>
+        <label>Country: <input id="adminCountry" /></label>
+        <label>Genres (comma): <input id="adminGenres" /></label>
+        <label>1080 URL: <input id="admin1080" /></label>
+        <label>720 URL: <input id="admin720" /></label>
+        <label>480 URL: <input id="admin480" /></label>
+        <label>Description EN: <textarea id="adminDescEn"></textarea></label>
+        <label>Description FA: <textarea id="adminDescFa"></textarea></label>
+        <button id="saveMovie">Save Movie</button>
+        <button id="logoutAdmin">Logout</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
